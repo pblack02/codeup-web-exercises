@@ -9,7 +9,7 @@
 //  * > sayHello("codeup") // returns "Hello, codeup!"
 
 function sayHello(name){
-    console.log('Hello,'+ name);
+    return 'Hello, '+ name + '!';
 }
 sayHello('Codeup!');
 
@@ -28,7 +28,7 @@ console.log(helloMessage);
 //  * variable to the 'sayHello' function. You should see the same output in the
 //  * console.
 
-const myName = "Bobby";
+const myName = 'Presley';
 console.log(sayHello(myName));
 
 
@@ -71,8 +71,8 @@ console.log(isTwo(random));
 //  * > calculateTip(0.15, 33.42) // returns 5.013
 //  */
 
-function calculateTip(num1, num2){
-    let tip = num1 * num2;
+function calculateTip(tipPercentage, totalBill){
+    let tip = tipPercentage * totalBill;
     return tip
 }
 console.log(calculateTip(0.20, 20));
@@ -109,8 +109,8 @@ alert (calculateTip(billTotal, tipPrecentage));
 //  *
 //  * > applyDiscount(45.99, 0.12) // 40.4712
 
-let originalPrice = 50;
-let discountPercent = 0.10;
+let originalPrice = 45.99;
+let discountPercent = 0.12;
 
 function apllyDiscount(originalPrice, discountPercent){
     let totalBill = originalPrice * discountPercent;
