@@ -9,58 +9,111 @@
 <script>
     "use strict";
 
-    /* TODO
+//     /* TODO
+//
+//       Write a function, addTen, that takes in an input. If the input is a number,
+//       return the input plus ten and false otherwise.
+//
+//       Examples:
+//
+//       addTen(0); // returns 10
+//       addTen(10); // returns 20
+//       addTen('bob'); // returns false
+//
+//      */
+//     function addTen(num) {
+//         if (typeof num === 'number') {
+//             return num + 10;
+//         } else {
+//             return 'false';
+//         }
+//     }
+//
+//     console.log(addTen(-10));
+//     console.log(addTen('presley'));
+//
+//     // Copy and paste the following warm up in your `js-warmups.html` file and complete the TODO...
+//     //
+//     // /* TODO
+//     //
+//     // Write a function, makeUpperCase, that takes in an input and returns the input in uppercase if it is a string.
+//     // If the input is not a string, return false.
+//     //
+//     // Examples:
+//     //
+//     // makeUpperCase('cat') // returns 'CAT'
+//     // makeUpperCase('DoG') // returns 'DOG'
+//     // makeUpperCase('CODEUP') // returns 'CODEUP'
+//     // makeUpperCase(54) // returns false
+//     // makeUpperCase(true) // returns false
+//     // makeUpperCase(null) // returns false
+//     //
+//     // */
+//
+// function makeUpperCase(input){
+//     if (typeof input == 'string') {
+//         return input.toUpperCase();
+//     } else {
+//         return false;
+//     }
+// }
+//
+// console.log(makeUpperCase('presley'))
+// console.log(makeUpperCase('cat')) // returns 'CAT'
+// console.log(makeUpperCase(54)) // returns 'DOG'
 
-      Write a function, addTen, that takes in an input. If the input is a number,
-      return the input plus ten and false otherwise.
 
-      Examples:
-
-      addTen(0); // returns 10
-      addTen(10); // returns 20
-      addTen('bob'); // returns false
-
-     */
-    function addTen(num) {
-        if (typeof num === 'number') {
-            return num + 10;
-        } else {
-            return 'false';
+ //    // Array lecture
+ //    // .push() pushes to the end.
+ // const names =["a","b","c"];
+ // const newnames = names.push("D", "e");
+ //
+ //    // .unshift() pushes to the front. the left side.
+ // const manes = ["v", "b"];
+ // const newmanes = manes.unshift("c");
+ //
+ // // .pop() removes the last array- dosent take in any arguments.
+ //    manes.pop();
+ //
+ //    // .shift() removes the first array element.
+ //    // .indexof() finds the exact element we are looking for
+ //    //slice-
+ //    // .reverse()-flips the places last becomes first/ frist becomes last
+ //    //.sort()- puts it in order - can put a function in there and tell it how to sort.
+ //
+ //    // object lecture
+ //    const car = {
+ //        make: "Ford",
+ //        model: "Fusion SE"
+ //    };
+    //dot notation
+    // car.make ="Toyota"
+    // car.model ="Honda"
+    // console.log(car);
+// Array of objects
+    const car = [
+        {
+            make: "ford",
+            model: "fusion",
+            owner: {
+                name:"jane",
+                age: 21
+            },
+            honk: function (){
+                console.log (`${this.make} honked`);
+            }
+        },
+        {
+            make: "toyota",
+            model: "f-w",
+            owner: {
+                name: "bob",
+                age: 34
+            },
         }
-    }
-
-    console.log(addTen(-10));
-    console.log(addTen('presley'));
-
-    // Copy and paste the following warm up in your `js-warmups.html` file and complete the TODO...
-    //
-    // /* TODO
-    //
-    // Write a function, makeUpperCase, that takes in an input and returns the input in uppercase if it is a string.
-    // If the input is not a string, return false.
-    //
-    // Examples:
-    //
-    // makeUpperCase('cat') // returns 'CAT'
-    // makeUpperCase('DoG') // returns 'DOG'
-    // makeUpperCase('CODEUP') // returns 'CODEUP'
-    // makeUpperCase(54) // returns false
-    // makeUpperCase(true) // returns false
-    // makeUpperCase(null) // returns false
-    //
-    // */
-
-function makeUpperCase(input){
-    if (typeof input == 'string') {
-        return input.toUpperCase();
-    } else {
-        return false;
-    }
-}
-
-console.log(makeUpperCase('presley'))
-console.log(makeUpperCase('cat')) // returns 'CAT'
-console.log(makeUpperCase(54)) // returns 'DOG'
+    ]
+    console.log(car[0].make);
+    console.log(car[0].honk());
 
 </script>
 
