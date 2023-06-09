@@ -20,10 +20,10 @@ console.log(person.lastName);
 //  * console.log the returned message to check your work
 
 person.sayHello = function (){
-    console.log(`Hello from ${person.firstName} ${person.lastName}`);
+    return (`Hello from ${person.firstName} ${person.lastName}`);
 }
 
-person.sayHello();
+console.log(person.sayHello());
 
 
 
@@ -54,7 +54,7 @@ person.sayHello();
 ];
  function hebDiscount (name,amount){
      if (amount > 200){
-         let discountAmount = (amount * 12) / 100;
+         let discountAmount = amount * 0.88;
          return (`hello ${name} amount before discount ${amount} after discount ${discountAmount}`);
      } else {
          return (`Hello ${name} sorry no discount total amount due ${amount}`);
@@ -100,6 +100,9 @@ let books = [
         }}
 ]
 
+
+
+// array.push({})- to add a object to an array.
 books.forEach(function (books){
     console.log("Title: " + books.title + " Author: " + books.author.firstname, books.author.lastname);
 })
@@ -118,12 +121,12 @@ books.forEach(function (books){
 //  * - the book title
 //  * - author's full name (first name + last name)
 //  *
-books.forEach(function (book){
-     console.log(`book #${books.indexOf(book)}`);
+books.forEach(function (book, index){
+     console.log(`book #${index + 1}`);
      console.log(`title ${book.title}`);
      console.log(`Author: ${book.author.firstname} ${book.author.lastname}`);
+     if (index < books.length - 1) console.log("---");
 })
-
 
 //  * Example Console Output:
 //  *
