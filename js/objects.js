@@ -152,9 +152,18 @@ books.forEach(function (book, index){
 //  *   previously. Refactor your code that creates the books array to instead
 //  *   use your function.
 
-function createBook(title, author){
+// function createbook(title, authorfirstname, authorlastname){
+//      return {
+//          title:
+//          author: {
+//              firstname:
+//              lastname:}
+//     }
+//
+// }
 
-}
+
+
 
 //  * - Create a function named `showBookInfo` that accepts a book object and
 //  *   outputs the information described above. Refactor your loop to use your

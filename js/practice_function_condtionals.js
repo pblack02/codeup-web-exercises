@@ -52,3 +52,33 @@ console.log(ifUpperCase("my favorite color is blue"));
 
 
 //     Write a function that accepts three parameters: a number, a lower bound, and an upper bound. The function should check if the number falls within the range defined by the lower and upper bounds. Return true if it does; otherwise, return false.
+
+
+function isANumber(num) {
+    if (typeof num !== 'number') {
+        return true;
+    } else {
+        return false;
+    }
+}
+function sumOfEqual (num1, num2, num3) {
+    if (isANumber(num1), isANumber(num2), isANumber(num3)) {
+            return false;
+        } else {
+            return num1 + num2 === num3;
+        }
+}
+
+console.log(sumOfEqual(1, 2, 3)) // returns true
+console.log(sumOfEqual(2, 2, 4)) // returns true
+console.log(sumOfEqual(10, 2, 12))// returns true
+console.log(sumOfEqual(10, false, 12)) // returns false
+
+// lecture example
+//
+// function sunIsEqual(input1, input2, input3){
+//     if (typeof input1 !== 'number' || typeof input2 !== 'number' || typeof input3 !== 'number'){
+//         return false;
+//     }
+//     return input1 + input2 === input3;
+// }
