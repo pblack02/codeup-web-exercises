@@ -2,3 +2,49 @@
     color: purple;
     text-decoration: underline;
 }
+.img-center{
+    float: right;
+}
+h1.center-align{
+    text-align: center;
+}
+header {
+   text-decoration: underline;
+    background-image: url('img/pexels-mark-mccammon-1934846.jpg');
+    background-position: left;
+    font-style: oblique;
+}
+h4 {
+    background-color: lightpink;
+}
+ol{
+    list-style: square;
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+ul{
+    list-style: upper-roman;
+    font-family: Helvetica, Arial, Sans-Serif;
+
+}
+td{
+    padding: 5px;
+    font-size: medium;
+    font-style: unset;
+}
+tr{
+    padding: 5px;
+    font-size: medium;
+    font-style: unset;
+}
+a{
+    color: blueviolet;
+
+}
+a:visited{
+    color: indianred;
+}
+a:hover{
+    color: cornflowerblue;
+}
+
+
