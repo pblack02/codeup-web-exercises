@@ -1,0 +1,33 @@
+:root{
+    --text-info-bg: lightskyblue;
+    --success-info-bg: lightgreen;
+    --waring-info-bg: yellow;
+    --error-into-bg: lightcoral;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.message-info{
+    background-color: var(--text-info-bg);
+    color: blue;
+    margin: 4px;
+}
+.message-success{
+    background-color: var(--success-info-bg);
+    color: green;
+    margin: 4px;
+}
+.message-warning{
+    background-color: var(--waring-info-bg);
+    color: burlywood;
+    margin: 4px;
+}
+.message-error{
+    background-color: var(--error-into-bg);
+    color: red;
+    margin: 4px;
+}

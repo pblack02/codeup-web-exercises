@@ -76,7 +76,8 @@ fieldset{
     color: white;
     font-weight: bold;
     border: 1px solid gray;
-    background-color: #0fb784;;
+    background-color: #0fb784;
+
 }
 /*.form-control {*/
 /*    !* There must be 4px on top of the text and below the text of an input with this class *!*/
