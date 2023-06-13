@@ -16,7 +16,7 @@
 /*    color: blue;*/
 /*    text-decoration: underline;*/
 /*}*/
-h1 {
+#container h1.fancy-header  {
     color: blue;
    text-decoration: underline;
 }
@@ -40,6 +40,6 @@ h1 {
 /*    float:right;*/
 /*}*/
 
-a{
+a>.article{
     float:right;
 }
