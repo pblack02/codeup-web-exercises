@@ -2,20 +2,35 @@
     color: purple;
     text-decoration: underline;
 }
-.img-center{
-    float: right;
+header img {
+    max-width: 100%;
+    object-fit: cover;
+
+
+}
+div.bg-color{
+    background-color: #DDDDDD;
 }
 h1.center-align{
     text-align: center;
 }
 header {
    text-decoration: underline;
-    background-image: url('img/pexels-mark-mccammon-1934846.jpg');
     background-position: left;
     font-style: oblique;
 }
-h4 {
-    background-color: lightpink;
+nav.img-bg{
+    background-image: url("../img/ocean-blue.jpg");
+    background-size: cover;
+}
+nav h4 {
+    background-color: cadetblue;
+}
+img {
+    max-width: 100%;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 5px;
 }
 ol{
     list-style: square;

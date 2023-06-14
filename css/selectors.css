@@ -40,6 +40,6 @@
 /*    float:right;*/
 /*}*/
 
-a>.article{
+.article>a {
     float:right;
 }
