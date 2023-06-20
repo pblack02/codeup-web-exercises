@@ -1,0 +1,41 @@
+/* mobile */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #3B94D9;
+}
+body {
+    background-color: blue;
+}
+/* large mobile and bigger */
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+        background-color: green;
+    }
+    .description {
+        flex-basis: 60%;
+    }
+    .list {
+        flex-basis: 40%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        flex-direction: row;
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        flex-direction: row;
+        background-color: purple;
+    }
+}

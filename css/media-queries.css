@@ -1,0 +1,50 @@
+/* Mobile device styling by default (mobile-first) */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-size: 1.2em;
+}
+#main {
+    background-color: turquoise;
+    border: 1px solid lightgray;
+}
+.nav-link {
+    display: flex;
+
+}
+/*.container {*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    max-width: 1400px;*/
+/*}*/
+/*div {*/
+/*    flex-basis: 100%;*/
+/*}*/
+/*h1, h2, h3, h4, h5, h6 {*/
+/*    text-align: center;*/
+/*}*/
+/*div {*/
+/*    !*float: left;*!*/
+/*    background-color: azure;*/
+/*}*/
+/*h3 {*/
+/*    padding: 16px;*/
+/*}*/
+/*p {*/
+/*    padding: 16px;*/
+/*}*/
+/*!* Medium devices (desktops, 992px and up) *!*/
+/*!* width of divs should be 33.333% and background should be blue **/
+
+/* *!*/
+/*@media screen and (min-width: 992px) {*/
+/*    body {*/
+/*        background: blue;*/
+/*    }*/
+/*    div {*/
+/*        flex-basis: 33.333%;*/
+/*    }*/
+/*}*/
