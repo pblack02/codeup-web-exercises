@@ -1,0 +1,9 @@
+.container-fluid.jumbotron {
+    min-height: 30vh;
+    background-image: url("../img/pizza.png");
+    height: 364px;
+    background-size: cover;
+}
+.card-body {
+    max-height: 4em;
+}

@@ -60,4 +60,57 @@ console.log(sumIsEqual(2, 2, 4)) // returns true
 console.log(sumIsEqual(10, 2, 12))// returns true
 console.log(sumIsEqual(10, false, 12)) // returns false
 
+// Create a function, returnProduct, that takes in an array of numbers and returns the product of all the numbers.
+//     Assume all element in the input array are valid numbers. Assume all array inputs have at least 1 number.
 
+
+function returnProduct ([num1,num2, num3]){
+    if (isANumber([num1, num2, num3])) {
+        let sum = num1 * num2 * num3
+        return sum;
+    } else {
+        return false;
+    }
+}
+returnProduct([1, 2, 3]) // returns 1 * 2 * 3 = 6
+returnProduct([3, 3, 3]) // returns 3 * 3 * 3 = 27
+returnProduct([4, 1, 2]) // returns 4 * 1 * 2 = 8
+returnProduct([4, 0, 2]) // returns 4 * 0 * 2 = 0
+returnProduct([5, 3, 2]) // returns 5 * 3 * 2 = 30
+
+// Create a function, returnTotalSales, that takes in an array of sales data objects and returns the sum of all
+// totalItemsSold properties. Assume all elements in the input array are valid sales data objects with a totalItemsSold
+// property.
+//
+//     EXAMPLE...
+//
+const salesData = [
+    {
+        month: 'January',
+        totalItemsSold: 0
+    },
+    {
+        month: 'February',
+        totalItemsSold: 5
+    },
+    {
+        month: 'March',
+        totalItemsSold: 2
+    },
+    {
+        month: 'April',
+        totalItemsSold: 10
+    },
+    {
+        month: 'May',
+        totalItemsSold: 30
+    }
+];
+
+let sum = salesData.reduce(function(a, b){
+    return a + b;
+});
+
+console.log(sum);
+
+// returnTotalSales(salesData) // returns 47

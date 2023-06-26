@@ -82,3 +82,69 @@ console.log(sumOfEqual(10, false, 12)) // returns false
 //     }
 //     return input1 + input2 === input3;
 // }
+// Create a function, returnProduct, that takes in an array of numbers and returns the product of all the numbers.
+//     Assume all element in the input array are valid numbers. Assume all array inputs have at least 1 number.
+function returnProduct ([num1,num2, num3]){
+    if (isANumber([num1, num2, num3])) {
+        let sum = num1 * num2 * num3
+        return sum;
+    } else {
+        return false;
+    }
+}
+
+console.log(returnProduct([1, 2, 3])) // returns 1 * 2 * 3 = 6
+console.log(returnProduct([3, 3, 3]))// returns 3 * 3 * 3 = 27
+console.log(returnProduct([4, 1, 2])) // returns 4 * 1 * 2 = 8
+console.log(returnProduct([4, 0, 2])) // returns 4 * 0 * 2 = 0
+console.log(returnProduct([5, 3, 2])) // returns 5 * 3 * 2 = 30
+
+// function returnProduct(nums){
+//     let product = 1
+//     for (let num of nums) {
+//          product *= num;
+//     }
+//     return product;
+// }
+
+// / Create a function, returnTotalSales, that takes in an array of sales data objects and returns the sum of all
+// // totalItemsSold properties. Assume all elements in the input array are valid sales data objects with a totalItemsSold
+// // p
+
+const salesData = [
+    {
+        month: 'January',
+        totalItemsSold: 0
+    },
+    {
+        month: 'February',
+        totalItemsSold: 5
+    },
+    {
+        month: 'March',
+        totalItemsSold: 2
+    },
+    {
+        month: 'April',
+        totalItemsSold: 10
+    },
+    {
+        month: 'May',
+        totalItemsSold: 30
+    }
+];
+
+
+
+function returnTotalSales (array) {
+    let total = 0;
+    for (let i = 0; i < salesData.length; i += 1) {
+        total += salesData[i].totalItemsSold;
+    }
+    return total;
+}
+
+console.log(returnTotalSales(salesData));
+
+
+
