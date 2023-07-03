@@ -84,20 +84,20 @@ console.log(sumOfEqual(10, false, 12)) // returns false
 // }
 // Create a function, returnProduct, that takes in an array of numbers and returns the product of all the numbers.
 //     Assume all element in the input array are valid numbers. Assume all array inputs have at least 1 number.
-function returnProduct ([num1,num2, num3]){
-    if (isANumber([num1, num2, num3])) {
-        let sum = num1 * num2 * num3
-        return sum;
-    } else {
-        return false;
-    }
-}
-
-console.log(returnProduct([1, 2, 3])) // returns 1 * 2 * 3 = 6
-console.log(returnProduct([3, 3, 3]))// returns 3 * 3 * 3 = 27
-console.log(returnProduct([4, 1, 2])) // returns 4 * 1 * 2 = 8
-console.log(returnProduct([4, 0, 2])) // returns 4 * 0 * 2 = 0
-console.log(returnProduct([5, 3, 2])) // returns 5 * 3 * 2 = 30
+// function returnProduct ([num1,num2, num3]){
+//     if (isANumber([num1, num2, num3])) {
+//         let sum = num1 * num2 * num3
+//         return sum;
+//     } else {
+//         return false;
+//     }
+// }
+//
+// console.log(returnProduct([1, 2, 3])) // returns 1 * 2 * 3 = 6
+// console.log(returnProduct([3, 3, 3]))// returns 3 * 3 * 3 = 27
+// console.log(returnProduct([4, 1, 2])) // returns 4 * 1 * 2 = 8
+// console.log(returnProduct([4, 0, 2])) // returns 4 * 0 * 2 = 0
+// console.log(returnProduct([5, 3, 2])) // returns 5 * 3 * 2 = 30
 
 // function returnProduct(nums){
 //     let product = 1
@@ -131,20 +131,132 @@ const salesData = [
     {
         month: 'May',
         totalItemsSold: 30
-    }
+    },
 ];
 
 
 
-function returnTotalSales (array) {
-    let total = 0;
-    for (let i = 0; i < salesData.length; i += 1) {
-        total += salesData[i].totalItemsSold;
+// function returnTotalSales(array) {
+//     let total = 0;
+//     for (let i = 0; i < salesData.length; i += 1) {
+//         total += salesData[i].totalItemsSold;
+//     }
+//     return total;
+// }
+//
+// console.log(returnTotalSales(salesData)),
+
+
+// Create a function, returnAvgSales, that takes in an array of sales data objects and returns the average of all
+// total items sold. Assume all elements in the input array are valid sales data objects with a totalItemsSold
+// property. If the array is empty, return 0. If the array has one element, return the value of the totalItemsSold.
+//
+// //     EXAMPLE...
+//
+// const salesData = [
+//     {
+//         month: 'January',
+//         totalItemsSold: 0
+//     },
+//     {
+//         month: 'February',
+//         totalItemsSold: 5
+//     },
+//     {
+//         month: 'March',
+//         totalItemsSold: 2
+//     },
+//     {
+//         month: 'April',
+//         totalItemsSold: 10
+//     },
+//     {
+//         month: 'May',
+//         totalItemsSold: 30
+//     }
+// ];
+
+// returnAvgSales(salesData) // returns 9.4
+
+
+
+// function returnAvgSales(salesData){
+//     let total = 0;
+//     salesData.forEach(salesDataObj => {
+//         total += salesDataObj.totalItemsSold
+//     })
+//     return returnTotalSales(salesData) / salesData.length;
+// },
+//
+// console.log(returnAvgSales(salesData));
+
+// Create a function, returnAdmins, that takes in an array of user objects
+// and returns an array of only the admin user objects. Assume the array
+// has at least one user object and all elements have an isAdmin property.
+//
+//     Example:
+
+
+const users = [
+
+    {
+        username: 'fred123',
+        password: 'letmein',
+        email: 'fred123@email.com',
+        isAdmin: true
+    },
+    {
+        username: 'cindy123',
+        password: 'hello123',
+        email: 'cindy123@email.com',
+        isAdmin: false
+    },
+    {
+        username: 'kathy123',
+        password: 'letmein',
+        email: 'kathy123@email.com',
+        isAdmin: true
+    },
+    {
+        username: 'kyle123',
+        password: 'letmein',
+        email: 'kyle123@email.com',
+        isAdmin: false
     }
-    return total;
+]
+
+
+function returnAdmins (array){
+    const admins = [];
+    for(let i = 0; i < users.length; i += 1) {
+        if (users[i].isAdmin === true){
+            admins.push(users[i].username);
+        }
+    }
+    return admins
 }
 
-console.log(returnTotalSales(salesData));
+console.log(returnAdmins(users));
+
+
+
+// returnAdmins(users) returns...
+//
+// [
+//
+//     {
+//         username: 'fred123',
+//         password: 'letmein',
+//         email: 'fred123@email.com',
+//         isAdmin: true
+//     },
+//     {
+//         username: 'kathy123',
+//         password: 'letmein',
+//         email: 'kathy123@email.com',
+//         isAdmin: true
+//     }
+// ],
 
 
 
