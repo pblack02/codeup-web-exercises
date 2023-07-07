@@ -18,7 +18,7 @@ $(function() {
         },
         function() {
             $(this).css('color', 'black');
-        }
+        })
 
 
 
@@ -45,7 +45,7 @@ $(function() {
 
     // selection everything
     $('*').css('font-weight', 'bold');
-    );
+
 
 
 
