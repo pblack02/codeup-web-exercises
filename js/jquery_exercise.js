@@ -1,3 +1,3 @@
 $(function() {
-    alert('The page is loaded.');
+    alert('The DOM is loaded.');
 });
