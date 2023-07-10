@@ -28,13 +28,10 @@ $(function() {
 
 
 
-
-
-
-
-
-
-
+    // can also make functions to change
+    $('h2')
+        .on('click', underlineThis)
+        .on('dblclick', noUnderlinethis);
 
 
 

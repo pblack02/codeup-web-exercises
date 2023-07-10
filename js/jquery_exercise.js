@@ -1,11 +1,16 @@
 $(function() {
 
-    // Add jQuery code that will change the background color of an h1 element when clicked.
-    $('h1').click(
-        function() {
-            $(this).css('background-color', 'blue');
-        })
+    // // Add jQuery code that will change the background color of an h1 element when clicked.
+    // $('h1').click(
+    //     function() {
+    //         $(this).css('background-color', 'blue');
+    //     })
 
+    // the method to use
+    $('h1').on('click', (e) => {
+        $(e.target).css('background', 'blue')
+        }
+    )
     // Make all paragraphs have a font size of 18px when they are double clicked.
     $('p').dblclick(
         function() {
@@ -19,6 +24,7 @@ $(function() {
         function() {
             $(this).css('color', 'black');
         })
+
 
 
 
