@@ -140,20 +140,28 @@
 
 
 
-    function getTopRunners(array){
-     let topRunner = [];
-     for (let runner of array) {
-         if (totalTopRunners(runner.lapTimes) <= 50) {
-             topRunner.push({
-                 name: runner.name,
-                 age: runner.age
-             });
-         }
-     }
+    // function getTopRunners(array){
+    //  let topRunner = [];
+    //  for (let runner of array) {
+    //      if (totalTopRunners(runner.lapTimes) <= 50) {
+    //          topRunner.push({
+    //              name: runner.name,
+    //              age: runner.age
+    //          });
+    //      }
+    //  }
+    //     return topRunner;
+    // }
+// to get just the TOP runner
+    function getTopRunner(runnersArray){
+        let topRunner = runnersArray[0];
+        for (let i = 1; i < runnersArray.length; i++){
+            if (totalTopRunners(runnersArray[i].lapTimes) < totalTopRunners(topRunner.lapTimes)){
+                topRunner = runnersArray[i];
+            }
+        }
         return topRunner;
     }
-
-
     function totalTopRunners(array){
         let sum = 0;
         let count = 0;
@@ -164,7 +172,8 @@
         return sum / count
     }
 
-    console.log(getTopRunners(runners));
+    console.log(getTopRunner(runners));
+
     // // Expected Output:
     // [
     //     { name: 'Alice', age: 25, lapTimes: [50.5, 45.2, 48.8, 47.1] },

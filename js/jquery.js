@@ -42,6 +42,6 @@ let global = {
 global.konami();
 
 function activeCheatsheet(){
-    document.body.style.backgroundColor = 'pink';
-    document.body.style.color = 'maroon';
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'pink';
 }
