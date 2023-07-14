@@ -446,10 +446,39 @@ function getHouse (array){
     console.log(getHouse(hogwartsHouses));
 
 
+function removeEvens(inputArray){
+    // Gaurd against anything not array
+    if (!Array.isArray(inputArray)){
+        return false;
+    }
+    const oddNumberArray = [ ];
+    for(const number of inputArray){
+        // gaurd against any item in the array thats not a number
+        if (!isANumber(number)){
+            return false;
+        }
+        if (number % 2 !== 0){
+            oddNumberArray.push(number);
+        }
+    }
+    return oddNumberArray;
+}
+
+    console.log(removeEvens([62, 3, 2, 531, 7]));
 
 
 
 
+    // function isANumber(input){
+    // if (typeof input === "boolean" || input === null){
+    //     return false;
+    // }
+    // if (!isNaN(input)){
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+    // }
 
 </script>
 
