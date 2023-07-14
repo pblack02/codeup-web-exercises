@@ -7,14 +7,17 @@ $(() => {
     const favoriteRestaurant = [{
         "name": "Olive Garden, San Antonio",
         "category": "Italian",
+        "details": "Olive Garden is an American casual dining restaurant chain specializing in Italian–American cuisine.",
     }, {
         "name": "Hooters, San Antonio",
-        "category": "American-Style"
+        "category": "American-Style",
+        "details": "Sports bar & grill chain famous for chicken wings.",
     }, {
         "name": "McDonald, San Antonio",
         "category": "Fast-Food",
+        "details": "McDonald's Corporation is an American multinational fast food chain."
     }]
-
+    const userInput = "document.querySelector('#text')"
 
     // Functions
     // function that initializes the map
@@ -29,6 +32,16 @@ $(() => {
 
         return new mapboxgl.Map(mapOptions);
     }
+
+    // let mapBoxGeocoder = undefined;
+    // mapBoxGeocoder = new MapboxGeocoder({
+    //     accessToken: mapboxgl.accessToken,
+    //     mapboxgl: mapboxgl,
+    //     flyTo: false,
+    //     marker: false
+    // })
+    //
+    // map.addControl(mapBoxGeocoder);
 
     function createMarker(){
         return new mapboxgl.Marker()
@@ -53,6 +66,12 @@ $(() => {
             map.setCenter(data);
         })
     }
+    function goToAddress(){
+        geocode(userInput, MATBOX_TOKEN).then((data) => {
+            console.log(data);
+            map.setCenter(data);
+        })
+    }
 
     // function that uses reverse geocode
     // take cooridnates from the center of the map
@@ -67,49 +86,59 @@ $(() => {
     }
     // function that uses geocode to take in string
     // get cords to set marker and popup
-    function markRestaurant(){
-        geocode('Olive Garden, San Antonio', MATBOX_TOKEN).then((data) => {
-            const restaurantPopup = new mapboxgl.Popup()
-                .setHTML(`<h3>Olive Garden</h3>
-                    `)
-            const restaurantMarker = new mapboxgl.Marker()
-                .setLngLat(data)
-                .addTo(map)
-                .setPopup(restaurantPopup);
-            restaurantPopup.addTo(map);
-        })
-
-    }
+    // function markRestaurant(){
+    //     geocode('Olive Garden, San Antonio', MATBOX_TOKEN).then((data) => {
+    //         const restaurantPopup = new mapboxgl.Popup()
+    //             .setHTML(`<h3>Olive Garden</h3>
+    //                 `)
+    //         const restaurantMarker = new mapboxgl.Marker()
+    //             .setLngLat(data)
+    //             .addTo(map)
+    //             .setPopup(restaurantPopup);
+    //         restaurantPopup.addTo(map);
+    //     })
+    //
+    // }
     function goToFavoriteRestaurants(){
         favoriteRestaurant.forEach( function(restaurant){
             console.log(restaurant.name);
             geocode(`${restaurant.name}`, MATBOX_TOKEN).then((data) => {
                 console.log(data);
                 const restaurantPopup = new mapboxgl.Popup()
-                    .setHTML(`<h3>${restaurant.name}</h3>
+                    .setHTML(`<h6>${restaurant.name}</h6>
                             <p>${restaurant.category}</p>
+                            <p>${restaurant.details}</p>
                         `)
                 const restaurantMarker = new mapboxgl.Marker()
                     .setLngLat(data)
                     .addTo(map)
                     .setPopup(restaurantPopup);
                 restaurantPopup.addTo(map);
+                // restaurantMarker.setPopup(restaurantPopup);
             })
         });
     }
 
-goToFavoriteRestaurants(favoriteRestaurant);
+
+    function zoomFive (){
+        return map.setZoom(5);
+    }
+    function zoomTen (){
+        return map.setZoom(10);
+    }
+    function zoomTwenty(){
+        return map.setZoom(20);
+    }
 
 
-
-
-
-    // Events
-    document.querySelector('#geocode-button').addEventListener('click', goToParis);
-    document.querySelector('#reverse-geocode-button').addEventListener('click', findAndPrintAddress)
+    // // Events
+    // document.querySelector('#geocode-button').addEventListener('click', goToParis);
+    document.querySelector('#goAddress').addEventListener('click', goToAddress);
     document.querySelector('#mark-restaurant').addEventListener('click', goToFavoriteRestaurants)
 
-
+    document.querySelector('#Lvl5').addEventListener('click', zoomFive);
+    document.querySelector('#Lvl10').addEventListener('click', zoomTen);
+    document.querySelector('#Lvl20').addEventListener('click', zoomTwenty);
 
 
     // Runs when the Program Loads
