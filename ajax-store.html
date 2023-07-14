@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Online Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ajax-store.css">
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products" class="table">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button type="button" class="btn btn-primary" id="refresh">Refresh</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function() {
+        "use strict";
+        const tableBody = document.querySelector('#insertProducts');
+        function refreshPage(){
+            $.ajax('data/inventory.json').done((tools) => {
+                console.log(tools);
+                tableBody.innerHTML = '';
+                for (let tool of tools){
+                    let row = document.createElement('tr');
+                    row.innerHTML = `
+                <td>${tool.title}</td>
+                <td>${tool.quantity}</td>
+                <td>${tool.price}</td>
+                <td>${tool.categories}</td>
+            `;
+                    tableBody.appendChild(row);
+                }
+            })
+        }
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+       refreshPage();
+        let refresher = document.querySelector('#refresh');
+        refresher.addEventListener('click', refreshPage);
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        // Add some new entries to inventory.json and see how the data on the page gets updated.
+
+
+
+
+    })();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
