@@ -66,7 +66,7 @@ $.ajax(getWeatherURL(...sanAntonioCoords))
                 .append($('<span>').addClass('span-city-name').text(data.city.name));
             cardBody.append(cityName);
 
-            let temperature = $('<p>').addClass('justify-center').html(`The current temperature is: ${forecast.main.temp}°<br>
+            let temperature = $('<p>').addClass('justify-center').html(`The temperature outside <br> ${forecast.main.temp}°<br>
       With a feels like of ${forecast.main.feels_like}° <br> The low for the day ${forecast.main.temp_min}
       `);
             cardBody.append(temperature);
