@@ -29,10 +29,13 @@ $(function () {
 // TODO: add the needed JS so that the number selected in the number input will be added to the number in the span when the button is clicked
 
 $('#add-btn').on('click', () => {
-    let number = $('#number');
-    let currentSum = parseInt($('#sum-output').text());
-    let newSum = currentSum + number;
-
+    console.log('click');
+    let number = $('#number').val();
+    console.log(number);
+    let currentSum = $('#sum-output').text();
+    console.log(currentSum);
+    let newSum = parseInt(currentSum) + parseInt(number);
+    console.log(newSum);
     $('#sum-output').text(newSum);
 })
 
